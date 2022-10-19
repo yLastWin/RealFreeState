@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://kit.fontawesome.com/14edf1c102.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/slideshow.css" />
+    <link rel="stylesheet" type="text/css" href="css/mainstyle.css" />
+
+    <script src="scripts/sidecartnav.js"></script>
+    <script src="scripts/searchform.js"></script>
+  </head>
+
+  <body>
+    <nav>
+      <div class="navbar">
+        <i
+          class="fa fa-navicon"
+          onclick="toggleNav()"
+          style="font-size: 24px"
+        ></i>
+        <h1>Discover Ro</h1>
+
+        <div class="menu">
+          <ul class="nav_links">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT US</a></li>
+            <li><a href="#">OUR LOCATIONS</a></li>
+            <li><a href="#">REVIEWS</a></li>
+            <li><a href="#">CONTACT US</a></li>
+          </ul>
+        </div>
+
+        <div id="mySideNav" class="sidenav">
+          <div class="ham_menu">
+            <ul class="ham_links">
+              <li><a href="#">HOME</a></li>
+              <li><a href="#">ABOUT US</a></li>
+              <li><a href="#">OUR LOCATIONS</a></li>
+              <li><a href="#">REVIEWS</a></li>
+              <li><a href="#">CONTACT US</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section>
+      <!-- Slideshow container -->
+      <div class="slideshow-container">
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <img src="images/img1.jpg" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="images/img2.jpg" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="images/img3.jpg" />
+        </div>
+
+        <!-- Next and previous buttons -->
+        <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+      </div>
+
+      <div class="search-container">
+        <button type="button" class="collapsible">
+          SEARCH YOUR FUTURE TRIP
+        </button>
+        <div class="content">
+          <form>
+            <label>City, country or apartament</label>
+            <input type="text" name="search" placeholder="Search.." />
+
+            <label id="label1" for="pers">Nr of Pers</label>
+            <select id="pers" name="pers">
+              <option value="1">1 Pers</option>
+              <option value="2">2 Pers</option>
+              <option value="3">3 Pers</option>
+              <option value="4">4 Pers</option>
+            </select>
+
+            <label id="label2" for="rooms">Nr of Rooms</label>
+            <select id="rooms" name="rooms">
+              <option value="1">1 Room</option>
+              <option value="2">2 Rooms</option>
+              <option value="3">3 Rooms</option>
+            </select>
+
+            <label id="label3" for="date">Check-in</label>
+            <input type="date" id="date" value="2023-12-30" />
+
+            <label id="label4" for="duration">Duration</label>
+            <select id="duration" name="duration">
+              <option value="1">1 Night</option>
+              <option value="2">2 Nights</option>
+              <option value="3">3 Nights</option>
+              <option value="4">4 Nights</option>
+              <option value="5">5 Nights</option>
+            </select>
+
+            <input id="sub" type="submit" value="Search..." />
+          </form>
+        </div>
+      </div>
+
+      <div class="h-show">
+        <div id="h-title"><h2>EXPERIENCE THE FINEST CITIES</h2></div>
+
+        <div class="cart">
+          <img src="images/brasov.jpg" />
+          <div class="cart-text">Brasov</div>
+        </div>
+
+        <div class="cart">
+          <img src="images/sibiu.jpg" />
+          <div class="cart-text">Sibiu</div>
+        </div>
+
+        <div class="cart ndrow">
+          <img src="images/maramures.jpg" />
+          <div class="cart-text">Maramures</div>
+        </div>
+
+        <div class="cart ndrow rdrow">
+          <img src="images/iasi.jpg" />
+          <div class="cart-text">Iasi</div>
+        </div>
+
+        <div class="cart throw rdrow">
+          <img src="images/sighisoara.jpg" />
+          <div class="cart-text">Sighisoara</div>
+        </div>
+      </div>
+
+      <div class="popular-ap-title">
+        <h2>Popular apartaments</h2>
+        <h3>Change period</h3>
+      </div>
+      <div class="change-period">
+        <span>Per Day</span
+        ><span
+          ><label class="switch" onclick="changePrice();">
+            <input type="checkbox" class="switchValue" />
+            <span class="slider round"></span> </label
+        ></span>
+        <span>Per Week</span>
+      </div>
+      <div class="topping">
+        <div class="cart">
+          <img src="images/room1.jpg" />
+          <div class="cart-loc"><h4>Bucuresti</h4></div>
+          <div class="cart-descr"><h3>Bedroom Unbeatable</h3></div>
+          <div class="cart-price"></div>
+        </div>
+
+        <div class="cart">
+          <img src="images/room2.jpg" />
+          <div class="cart-loc"><h4>Brasov</h4></div>
+          <div class="cart-descr"><h3>Bedroom Boundless</h3></div>
+          <div class="cart-price"></div>
+        </div>
+
+        <div class="cart ndrow">
+          <img src="images/room3.jpg" />
+          <div class="cart-loc"><h4>Sighisoara</h4></div>
+          <div class="cart-descr"><h3>Bedroom Spacious</h3></div>
+          <div class="cart-price"></div>
+        </div>
+
+        <div class="cart ndrow ffrow">
+          <img src="images/room4.jpg" />
+          <div class="cart-loc"><h4>Alba Iulia</h4></div>
+          <div class="cart-descr"><h3>Bedroom Substantial</h3></div>
+          <div class="cart-price"></div>
+        </div>
+        <div class="cart throw">
+          <img src="images/room5.jpg" />
+          <div class="cart-loc"><h4>Sinaia</h4></div>
+          <div class="cart-descr"><h3>Bedroom Superior</h3></div>
+          <div class="cart-price"></div>
+        </div>
+        <div class="cart throw">
+          <img src="images/room6.jpg" />
+          <div class="cart-loc"><h4>Paltinis</h4></div>
+          <div class="cart-descr"><h3>Bedroom Sunshine</h3></div>
+          <div class="cart-price"></div>
+        </div>
+      </div>
+      <div id="moreviews">View All</div>
+    </section>
+
+    <script src="scripts/slideshow.js"></script>
+    <script src="scripts/periodcfg.js"></script>
+  </body>
+</html>
