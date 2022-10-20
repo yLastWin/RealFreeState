@@ -10,17 +10,20 @@ body {
 }
 
 /* navbar */
-
+body {
+  background-color: #2b2d42;
+}
 .navbar {
+  width: 100%;
   display: grid;
   grid-template-columns: 30px auto;
   align-items: center;
-  background-color: #ffffff;
+  background-color: #2b2d42;
   z-index: 2;
-  width: 100%;
+
   height: 55px;
 
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   border-bottom: 1px solid gray;
   border-top: 5px solid #c15401;
 }
@@ -47,17 +50,17 @@ body {
   height: 100%;
   width: 0;
 
-  top: 70px;
+  top: 56px;
   left: 0;
-  background-color: rgba(54, 54, 54, 0.95);
+  background-color: #8d99ae;
   overflow-x: hidden;
   transition: 0.5s;
 }
 .sidenav a {
-  padding: 8px 8px 8px 8px;
+  padding: 8px 8px 8px 0px;
   text-decoration: none;
   font-size: 25px;
-  color: #ffffff;
+  color: #d90429;
   display: block;
   transition: 0.3s;
 }
@@ -80,6 +83,7 @@ section {
 
   grid-gap: 5px;
   justify-content: center;
+  background-color: #2b2d42;
 }
 
 .search-container {
@@ -90,13 +94,17 @@ section {
   width: 100%;
   display: grid;
   justify-content: center;
-  background-color: #e9dac1;
+  background-color: #8d99ae;
   border-radius: 30px 60px 30px 60px;
   border: 1px solid #beb39e;
 }
 .collapsible {
   width: 100%;
+  border: none;
   height: 40px;
+  background-color: #8d99ae;
+  color: #ef233c;
+  font-weight: bold;
 }
 
 .content {
@@ -108,14 +116,14 @@ section {
 .search-container form {
   display: flex;
   flex-direction: column;
-  background-color: #e9dac1;
+  background-color: #edf2f4;
   color: black;
 }
 
 .search-container form input,
 .search-container form select {
   width: 250px;
-  background-color: #f7ecde;
+  background-color: #edf2f4;
   color: #c15401;
   padding: 5px;
 }
@@ -128,7 +136,7 @@ section {
   grid-template-rows: 30px repeat(5, 560px);
   grid-gap: 15px;
   justify-content: center;
-  background-color: white;
+  background-color: #2b2d42;
 }
 
 .h-show h2 {
@@ -144,10 +152,12 @@ section {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
 }
 .h-show .cart:hover {
-  transform: scale(1.5) rotateY(-360deg);
+  transform: scale(1.15) rotateY(-360deg);
 
   transition: transform 1.5s;
   z-index: 2;
+  border-bottom: 2px solid #edf2f4;
+  border-left: 2px solid #edf2f4;
 }
 .h-show img {
   width: 340px;
@@ -245,17 +255,23 @@ input:checked + .slider:before {
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
-  background-color: white;
+  background-color: #2b2d42;
   margin-bottom: 150px;
 }
+
 .topping .cart {
   margin-top: 20px;
   height: 400px;
   width: 340px;
 
-  background-color: #e9dac1;
+  background-color: #edf2f4;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   color: #c15401;
+  opacity: 0.7;
+}
+.topping .cart:hover {
+  opacity: 1;
+  transition: opacity 0.7s;
 }
 
 .topping img {
@@ -303,6 +319,7 @@ footer{
 @media only screen and (min-width: 768px) {
   .navbar {
     grid-template-columns: 150px auto;
+    margin-bottom: 30px;
   }
 
   .fa-navicon {
@@ -344,6 +361,7 @@ footer{
     grid-template-rows: 40px repeat(3, 560px);
     grid-template-columns: repeat(2, 1fr);
   }
+
   .h-show #h-title {
     grid-row: 1;
     grid-column: 1 / span 2;
@@ -353,6 +371,7 @@ footer{
     margin-right: auto;
     margin-left: auto;
   }
+
   .h-show .ndrow {
     grid-row: 3;
   }
@@ -369,7 +388,7 @@ footer{
   .search-container {
     position: relative;
     top: -50px;
-
+    background-color: #edf2f4;
     width: 700px;
     margin-left: auto;
     margin-right: auto;
@@ -447,6 +466,9 @@ footer{
     grid-row: 2;
     height: 336px;
     width: 250px;
+  }
+  .h-show .cart:hover {
+    transform: scale(1.15) rotateY(-360deg);
   }
   .h-show .rdrow {
     grid-row: 3;
