@@ -121,15 +121,17 @@ section {
 .search-container form {
   display: flex;
   flex-direction: column;
-  background-color: #edf2f4;
+  gap: 5px;
+  background-color: #8d99ae;
+
   color: black;
 }
 
 .search-container form input,
 .search-container form select {
   width: 250px;
-  background-color: #edf2f4;
-  color: #c15401;
+  background-color: #8d99ae;
+  color: black;
   padding: 5px;
 }
 
@@ -424,6 +426,8 @@ footer{
     grid-template-rows: 30px 40px 30px 40px;
     grid-template-columns: 1fr 1fr 1fr;
     text-align: left;
+    background-color: #edf2f4;
+    color: red;
   }
 
   .search-container form #label1 {
@@ -469,6 +473,7 @@ footer{
   }
   .search-container form input,
   .search-container form select {
+    background-color: #edf2f4;
     width: 100%;
   }
 

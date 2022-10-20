@@ -1,7 +1,7 @@
 var coll = document.getElementsByClassName("collapsible");
 var con = document.getElementsByClassName("content");
 var i;
-const colapsibleTrip = () => {
+window.onload = function () {
   if (window.screen.width <= 1024) {
     for (i = 0; i < coll.length; i++) {
       coll[i].addEventListener("click", function () {
@@ -17,5 +17,3 @@ const colapsibleTrip = () => {
     }
   }
 };
-
-window.onload = colapsibleTrip();
